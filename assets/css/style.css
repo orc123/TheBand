@@ -241,7 +241,6 @@ html {
 .places-list {
     margin: 32px -8px 0;
     padding-bottom: 48px;
-    
 }
 
     .places-list .place-item {
@@ -253,6 +252,7 @@ html {
     .places-list .place-img:hover {
         opacity: 0.6
     }
+
     .places-list .place-img {
         width: 100%;
         display: block;
@@ -281,18 +281,122 @@ html {
 
     .places-list .place-buy-btn {
         display: inline-block;
+        border: none;
         color: #fff;
         background: #000;
-        text-decoration: none;
         margin-top: 16px;
         padding: 8px 16px;
     }
 
         .places-list .place-buy-btn:hover {
+            cursor: pointer;
             background: #ccc;
             color: #000;
         }
 
 
-        #footer {
+#footer {
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+    .modal.open {
+        display: flex;
+    }
+
+    .modal .modal-container {
+        background: #fff;
+        width: 900px;
+        max-width: calc(100% - 32px);
+        min-height: 200px;
+        position: relative;
+        animation: modalFadeIn ease .6s;
+    }
+
+    .modal .modal-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #fff;
+        padding: 16px;
+    }
+
+        .modal .modal-close:hover,
+        .modal #modal-buy-ticket:hover {
+            cursor: pointer;
+            color: #000;
+            background-color: #ccc;
         }
+
+    .modal .modal-header {
+        background: #009688;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: #fff;
+        line-height: 1.5;
+    }
+
+
+    .modal .modal-body {
+        padding: 16px;
+    }
+
+    .modal .modal-label {
+        font-size: 15px;
+        display: block;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+    .modal .modal-input {
+        border: 1px solid #ccc;
+        width: 100%;
+        padding: 10px;
+        height: 37px;
+        margin-bottom: 24px;
+        font-size: 15px;
+    }
+
+    .modal #modal-buy-ticket {
+        width: 100%;
+        background: #009688;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+        padding: 16px;
+        margin: 16px 0;
+        text-transform: uppercase;
+    }
+
+    .modal .modal-footer {
+        padding: 16px;
+        float: right;
+    }
+
+    .modal .modal-footer a {
+        color: #2196F3
+    }
+
+    @keyframes modalFadeIn {
+        from {
+            transform: translateY(-150px);
+            opacity:0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
