@@ -22,6 +22,8 @@ html {
     4. Kiểu dáng
 */
 
+/* Common */
+
 .clear {
     clear: both;
 }
@@ -30,9 +32,60 @@ html {
     color: white !important;
 }
 
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+    .row::after {
+        content: "";
+        display: block;
+        clear: both
+    }
+
+.column {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: calc(100% / 3);
+}
+
+.col-4 {
+    width: 25%;
+}
+
+.col-5 {
+    width: 20%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+/* Main */
 #main {
 }
 
+
+/* Header */
 #header {
     height: 48px;
     background-color: #000;
@@ -185,11 +238,6 @@ html {
         padding-top: 48px;
     }
 
-    #content .member-item {
-        float: left;
-        width: calc(100% / 3);
-        text-align: center;
-    }
 
     #content .member-name {
         font-size: 15px
@@ -239,15 +287,9 @@ html {
     }
 
 .places-list {
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
+    margin-top: 32px;
+    margin-bottom: 48px;
 }
-
-    .places-list .place-item {
-        float: left;
-        width: calc(100% / 3);
-        padding: 0 8px;
-    }
 
     .places-list .place-img:hover {
         opacity: 0.6
@@ -294,6 +336,45 @@ html {
             color: #000;
         }
 
+.contact-content {
+    margin-top: 48px;
+}
+
+    .contact-content .contact-info {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+        .contact-content .contact-info i[class*="ti-"] {
+            width: 30px;
+            display: inline-block;
+        }
+
+    .contact-content .contact-form {
+        font-size: 15px;
+    }
+
+        .contact-content .contact-form .form-control {
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 100%;
+            outline: none;
+        }
+
+    .contact-content .form-submit-btn {
+        float: right;
+        font-size: 15px;
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #000;
+        padding: 10px 16px;
+    }
+
+        .contact-content .form-submit-btn:hover {
+            cursor: pointer;
+            background: #ccc;
+            color: #000;
+        }
 
 #footer {
 }
@@ -361,6 +442,7 @@ html {
         margin-bottom: 12px;
         line-height: 1.5;
     }
+
     .modal .modal-input {
         border: 1px solid #ccc;
         width: 100%;
@@ -386,17 +468,18 @@ html {
         float: right;
     }
 
-    .modal .modal-footer a {
-        color: #2196F3
+        .modal .modal-footer a {
+            color: #2196F3
+        }
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
     }
 
-    @keyframes modalFadeIn {
-        from {
-            transform: translateY(-150px);
-            opacity:0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
+}
