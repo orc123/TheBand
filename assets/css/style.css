@@ -227,6 +227,7 @@ html {
 
     #content .content-session {
         width: 800px;
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
         padding: 64px 0 112px;
