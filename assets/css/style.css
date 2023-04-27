@@ -100,6 +100,7 @@ html {
         background: #ccc;
         color: #000;
     }
+
 /* Main */
 #main {
 }
@@ -120,7 +121,8 @@ html {
     display: inline-block
 }
 
-#nav, .subnav {
+#nav,
+.subnav {
     list-style-type: none;
 }
 
@@ -161,7 +163,7 @@ html {
         top: 100%;
         left: 0;
         background: #fff;
-        box-shadow: 0 0 12px rgba(0, 0,0, 0.3);
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
         min-width: 160px;
     }
 
@@ -366,21 +368,6 @@ html {
             border: 1px solid #ccc;
             width: 100%;
             outline: none;
-        }
-
-    .contact-content .form-submit-btn {
-        float: right;
-        font-size: 15px;
-        background-color: #000;
-        color: #fff;
-        border: 1px solid #000;
-        padding: 10px 16px;
-    }
-
-        .contact-content .form-submit-btn:hover {
-            cursor: pointer;
-            background: #ccc;
-            color: #000;
         }
 
 .map-section img {
