@@ -115,6 +115,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav {
@@ -178,7 +179,8 @@ html {
         font-size: 12px;
     }
 
-#header .search-btn {
+#header .search-btn,
+#header .mobile-menu-btn {
     float: right;
     padding: 0 21px;
 }
@@ -188,7 +190,16 @@ html {
         cursor: pointer;
     }
 
-#header .search-icon {
+    #header .mobile-menu-btn:hover {
+        background-color: #ccc;
+    }
+
+        #header .mobile-menu-btn:hover .menu-icon {
+            color: #000;
+        }
+
+#header .search-icon,
+#header .menu-icon {
     color: #fff;
     font-size: 20px;
     line-height: 48px;
