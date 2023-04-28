@@ -24,8 +24,13 @@
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
         var header = document.getElementById('header');
         for (var i = 0; i < menuItems.length; i++) {
-            menuItems[i].onclick = function () {
-                header.style.height = null;
+            menuItems[i].onclick = function (e) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (!isParentMenu) {
+                    header.style.height = null;
+                } else {
+                    e.preventDefault();
+                }
             }
         }
     }
