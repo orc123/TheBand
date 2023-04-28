@@ -9,6 +9,10 @@
 /* Mobile */
 @media (max-width: 739px) {
 
+    .s-col-full {
+        width: 100%;
+    }
+
     #header {
         overflow: hidden;
     }
@@ -42,4 +46,9 @@
                 color: #fff;
                 padding: 5px 40px;
             }
+
+    #content .member-image {
+        width: 60%;
+    }
+
 }

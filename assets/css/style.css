@@ -275,7 +275,7 @@ html {
     }
 
     #content .member-list {
-        padding-top: 48px;
+        padding-top: 32px;
     }
 
 
@@ -327,7 +327,7 @@ html {
     }
 
 .places-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
     .places-list .place-img:hover {
