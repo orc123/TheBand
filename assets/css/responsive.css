@@ -9,8 +9,12 @@
 /* Mobile */
 @media (max-width: 739px) {
 
-    .s-col-full {
-        width: 100%;
+    .s-col-full, .s-full-width {
+        width: 100% !important;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px !important;
     }
 
     #header {
@@ -47,8 +51,13 @@
                 padding: 5px 40px;
             }
 
+
     #content .member-image {
         width: 60%;
     }
 
+
+    .contact-content .contact-form {
+        margin-top: 16px;
+    }
 }
